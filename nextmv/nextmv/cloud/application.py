@@ -2755,7 +2755,7 @@ class Application:
     def update_instance(
         self,
         id: str,
-        name: str,
+        name: Optional[str] = None,
         version_id: Optional[str] = None,
         description: Optional[str] = None,
         configuration: Optional[InstanceConfiguration] = None,
@@ -2767,7 +2767,7 @@ class Application:
         ----------
         id : str
             ID of the instance to update.
-        name : str
+        name : Optional[str], default=None
             Name of the instance.
         version_id : Optional[str], default=None
             ID of the version to associate the instance with.
